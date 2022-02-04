@@ -1,0 +1,4 @@
+SQLAlchemy==1.4.7
+pandas==1.2.4
+Django==3.2.7
+mssql-django

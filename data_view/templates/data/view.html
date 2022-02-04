@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if user.is_authenticated %}
+    Hi {{ user.username }}!
+    <p><a href="{% url 'logout' %}">Log Out</a></p>
+    <div class="container">
+        <div class="row">
+            <p>nombre de bien:</p>
+            <h6>
+            {{ bien }}
+            </h6>
+            <table class="table table-striped table-dark">
+                <thead>
+                  <tr>                     
+                     <th scope="col">Ville</th>
+                     <th scope="col">ecartType de prix</th>              
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    {% for s in std %}
+                        <tr>
+                            <td>{{ s.ville }}</td>
+                            <td>{{ s.prix_m2_ttc }}</td>
+                        </tr>
+                    {% endfor %}
+                  
+                </tbody>
+              </table>
+              <table class="table table-striped table-dark">
+                <thead>
+                  <tr>                     
+                     <th scope="col">Ville</th>
+                     <th scope="col">Moyenne de prix</th>              
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    {% for m in mean %}
+                        <tr>
+                            <td>{{ m.ville }}</td>
+                            <td>{{ m.prix_m2_ttc }}</td>
+                        </tr>
+                    {% endfor %}
+                  
+                </tbody>
+              </table>
+            {% else %}
+            <p>You are not logged in</p>
+            <a href="{% url 'login' %}">Log In</a>
+            {% endif %}
+        {% endblock %}

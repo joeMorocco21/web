@@ -1,0 +1,26 @@
+from django.db import models
+
+# Create your models here.
+class data_view(models.Model):
+    id_lot = models.TextField()
+    nb_piece = models.IntegerField()
+    typologie = models.TextField()
+    prix_tva_reduite = models.FloatField()
+    prix_tva_normale = models.FloatField()
+    prix_ht = models.FloatField()
+    prix_m2_ht = models.FloatField()
+    prix_m2_ttc = models.FloatField()
+    surface = models.FloatField()
+    etage = models.IntegerField()
+    orientation = models.TextField()
+    exterieur = models.BooleanField()
+    balcony = models.BooleanField()
+    garden = models.BooleanField()
+    parking = models.FloatField()
+    nom_programme = models.TextField()
+    ville = models.TextField()
+    departement = models.FloatField()
+    date_fin_programme = models.TextField()
+    adresse_entiere = models.TextField()
+    promoteur = models.TextField()
+    date_extraction = models.TextField()
