@@ -78,13 +78,13 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        "ENGINE": "mssql",
-        "NAME": "bdd",
-        "USER": "adminyoussef",
-        "PASSWORD": "641979Ab",
-        "HOST": "sqlyoussef.database.windows.net",
-        "PORT": "1433",
-        "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
+        "ENGINE": "***",
+        "NAME": "***",
+        "USER": "***",
+        "PASSWORD": "***",
+        "HOST": "***",
+        "PORT": "***",
+        "OPTIONS": {"driver": "***", 
         },
     }
 }
